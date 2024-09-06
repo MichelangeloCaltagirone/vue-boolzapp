@@ -47,6 +47,11 @@ header {
 /* Main Utility */
 #conversation {
     height: calc(100% - 130px);
+    display: flex;
+    overflow-y: scroll;
+}
+#contactMex, #userMex {
+    flex-basis: 50%;
 }
 footer {
     height: 65px;
