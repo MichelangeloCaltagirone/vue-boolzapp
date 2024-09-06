@@ -15,6 +15,7 @@
 }
 body {
     background-color: antiquewhite;
+    font-family: Lato;
 }
 aside {
     flex-basis: 40%;  
@@ -25,18 +26,34 @@ main {
     background-color: lightgray;
 }
 header {
-    height: 65px;   
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EAEAEA; 
 }
+i {
+    margin: 0 5px;
+    color: #B1B1B1;
+}
+.leftHeader {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
 
 
 /* Aside Utility */
 #remainder {
     height: 80px;
-    background-color: lightseagreen;
+    background-color:rgba(142, 218, 252, 1);
+    display: flex;
+    align-items: center;
 }
 #searchContact {
     height: 45px;
-    background-color: aliceblue;
+    background-color:#E9EBEB;
 }
 #contactList {
     overflow-y: scroll;
@@ -49,10 +66,56 @@ header {
     height: calc(100% - 130px);
     display: flex;
     overflow-y: scroll;
+    background-image: url(/img/mine.png);
 }
 #contactMex, #userMex {
     flex-basis: 50%;
 }
 footer {
     height: 65px;
+    background-color: #F3EEEA;
+}
+
+
+/* Utility */
+.profilePic {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.iconGroup {
+    margin-right: 15px;
+}
+.infoColumn {
+    display: flex;
+    flex-direction: column;
+}
+.lastAccessTime {
+    color: #B5B1B0;
+}
+
+
+/* section Remainder */
+
+#remainder i.fa-regular.fa-bell-slash::before {
+    font-size: 30px;
+    border-radius: 50%;
+    color: rgba(142, 218, 252, 1);
+    background-color: white; 
+}
+#remainder i {
+    width: 40px;
+    height: 40px;
+    padding: 5px
+}
+
+/* Section Search in Aside */
+#searchContact input {
+    width: 90%;
+    height: 30px;
+    margin-left: 5%;
+    margin-top: 7.5px;
+    border: 0;
+    padding-left: 10px;
 }
