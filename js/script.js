@@ -191,8 +191,25 @@ createApp ({
                             status: 'received'
                         }
                     ]
-                }
-            ]            
+                }                
+            ],
+            activeContact: 'Michele',
+            activeIndex: '0',
+            activeContactPic: './img/avatar_1.png'           
         }
     },
+
+    methods: {
+        populateConversation(contact, index) {
+            console.log(contact, index, 'clikkato contatto'),
+            this.activeContact = contact.name,
+            this.activeContactPic = contact.avatar,
+            this.activeIndex = index,
+            console.log(this.activeContactPic),
+            console.log(this.activeIndex),
+            console.log(this.activeContact)
+        }
+    }
 }).mount('.container');
+
+
