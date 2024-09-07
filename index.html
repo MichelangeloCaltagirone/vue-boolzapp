@@ -13,12 +13,14 @@
     <title>Boolzapp</title>
 </head>
 <body>
+    <!-- Vue JS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
     <div class="container">
         <aside>
             <header>
                 <div class="leftHeader">
-                    <img class="profilePic" src="/img/avatar_1.png" alt="">
+                    <img class="profilePic" src="/img/avatar_io.png" alt="">
                     <span class="userName">Sofia</span>
                 </div>
                 
@@ -41,136 +43,17 @@
                 </section>
                 <section id="contactList">
                     <ul>
-                        <li>                            
+                        <li v-for="(contact, index) in contacts">                            
                             <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
+                                <img class="profilePic" :src="contact.avatar" alt='...'>
                                 <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
+                                    <span class="contactName">{{contact.name}}</span>
                                     <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
                                 </div>
                                 <div>12:00</div>
                             </div>                                                
                         </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>
-                        <li>                            
-                            <div class="leftHeader">
-                                <img class="profilePic" src="/img/avatar_2.png" alt="">
-                                <div class="ColumnDisplay">
-                                    <span class="contactName">Michele</span>
-                                    <span class="lastAccessTime">Ultimo accesso oggi alle 12:00</span>
-                                </div>
-                                <div>12:00</div>
-                            </div>                                                
-                        </li>                          
+                        
                     </ul>                   
                 </section>
             </nav>
