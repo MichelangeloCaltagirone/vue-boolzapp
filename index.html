@@ -82,7 +82,7 @@
                 <section id="contactMex">
                     <ul>
                         <li>cao Lodis nihil deserunt sint. mei<span class="currentTime">12:00</span></li>
-                        <li v-for="mex in contacts[activeIndex].messages">{{messages}}</li>
+                        <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'received' ? mex.message : 'hidden'}}</li>
 
                     </ul>
                 </section>
@@ -90,21 +90,7 @@
                 <section id="userMex">
                     <ul>
                         <li>cao mesfgbdtrgdttttttttti<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>caowhtwht  mei<span class="currentTime">12:00</span></li>
-                        <li>cao mdfgbdt b  tgtregbe  wei<span class="currentTime">12:00</span></li>
-                        <li> quis fuwhtwtrhw cao mei<span class="currentTime">12:00</span></li>
+                        <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'sent' ? mex.message : ''}}</li>
                     </ul>
                 </section>
             </section>

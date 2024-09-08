@@ -24,7 +24,7 @@ Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permett
 Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
 
  */
-
+const contactMexs = document.querySelector('#contactMex ul');
 const {createApp} = Vue;
 
 createApp ({
@@ -207,8 +207,10 @@ createApp ({
             this.activeIndex = index,
             console.log(this.activeContactPic),
             console.log(this.activeIndex),
-            console.log(this.activeContact)
-        }
+            console.log(this.activeContact),
+            console.log(contactMexs.innerText)
+            
+            }
     }
 }).mount('.container');
 
