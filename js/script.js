@@ -218,7 +218,14 @@ createApp ({
                     status: 'sent'
                 }),
                 this.newMex = '',
-                console.log(this.contacts[this.activeIndex].messages)
+                console.log(this.contacts[this.activeIndex].messages),
+                setTimeout(() => {
+                    this.contacts[this.activeIndex].messages.push({
+                        date: null,
+                        message: 'Ok !',
+                        status: 'received'
+                    })
+                }, 1000)
                 
             }
     }
