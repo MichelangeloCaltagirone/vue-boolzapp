@@ -79,22 +79,14 @@
                 </div>
             </header>
             <section id="conversation">
-                <section id="contactMex">
+                <!-- <li>cao Lodis nihil deserunt sint. mei<span class="currentTime">12:00</span></li> -->
+                <!-- <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'received' ? mex.message : 'hidden'}}</li> -->
                     <ul>
                         <li>cao Lodis nihil deserunt sint. mei<span class="currentTime">12:00</span></li>
-                        <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'received' ? mex.message : 'hidden'}}</li>
-
+                        <li v-for="mex in contacts[activeIndex].messages"><div class={{mex.status}}>{{mex.message}}</div></li>
                     </ul>
-                </section>
 
-                <section id="userMex">
-                    <ul>
-                        <li>cao mesfgbdtrgdttttttttti<span class="currentTime">12:00</span></li>
-                        <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'sent' ? mex.message : ''}}</li>
-                    </ul>
-                </section>
             </section>
-
             <footer>
                 <i class="fa-regular fa-face-smile"></i>
                 <input type="search" placeholder="Scrivi messaggio">
