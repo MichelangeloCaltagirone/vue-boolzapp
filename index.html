@@ -79,11 +79,9 @@
                 </div>
             </header>
             <section id="conversation">
-                <!-- <li>cao Lodis nihil deserunt sint. mei<span class="currentTime">12:00</span></li> -->
-                <!-- <li v-for="mex in contacts[activeIndex].messages">{{mex.status == 'received' ? mex.message : 'hidden'}}</li> -->
+
                     <ul>
-                        <li>cao Lodis nihil deserunt sint. mei<span class="currentTime">12:00</span></li>
-                        <li v-for="mex in contacts[activeIndex].messages"><div class={{mex.status}}>{{mex.message}}</div></li>
+                        <li v-for="mex in contacts[activeIndex].messages" :class=mex.status><div>{{mex.message}}<span class="currentTime">12:00</span></div></li>
                     </ul>
 
             </section>
