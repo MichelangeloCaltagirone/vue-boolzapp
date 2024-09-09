@@ -39,11 +39,11 @@
             </section>
             <nav>
                 <section id="searchContact">
-                    <input type="search" placeholder="Cerca o inizia una nuova chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContact">
                 </section>
                 <section id="contactList">
                     <ul>
-                        <li  v-for="(contact, index) in contacts">                            
+                        <li v-for="(contact, index) in contacts" v-show="(searchContact.trim().toLowerCase() == '' || contact.name.toLowerCase().includes(searchContact))">                            
                             <div class="leftHeader" @click="populateConversation(contact, index)">
                                 <img class="profilePic" :src="contact.avatar" alt='...'>
                                 <div class="ColumnDisplay">
