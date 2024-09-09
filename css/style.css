@@ -87,20 +87,20 @@ main header {
         position: relative;
         border-radius: 8px;        
         background-color: #FFFFFF;
-        padding: 15px 12px;
+        padding: 16px 20px;
         font-size: 12px;
         margin-bottom: 10px;          
     }
-    .sent, .received {
+    ul li {
         display: flex;
     }
-    .sent {
+    ul li.sent {
         justify-content: end;
         div {
             background-color:#D5F9BA;
         }
     }
-   
+       
     .currentTime {
         color: #838484;
         font-size: 7px;
@@ -111,18 +111,6 @@ main header {
     }
 }
 
-    
-
-#contactMex {
-    padding-top: 3rem;
-}
-#userMex {
-    padding-top: 1rem;
-    ul li {
-        background-color:#D5F9BA;
-    }
-    
-}
 footer {
     height: 65px;
     background-color: #F3EEEA;

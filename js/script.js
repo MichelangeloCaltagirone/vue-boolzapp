@@ -193,10 +193,10 @@ createApp ({
                     ]
                 }                
             ],
-            activeContact: 'Michele',
+            activeContact: 'Michele', 
             activeIndex: '0',
             activeContactPic: './img/avatar_1.png',
-                     
+            newMex: ''
         }
     },
 
@@ -209,8 +209,20 @@ createApp ({
             console.log(this.activeContactPic),
             console.log(this.activeIndex),
             console.log(this.activeContact)            
+            },
+            appendNewMex() {
+                console.log(this.newMex,'nuovo messaggio'),
+                this.contacts[this.activeIndex].messages.push({
+                    date: null,
+                    message: this.newMex,
+                    status: 'sent'
+                }),
+                this.newMex = '',
+                console.log(this.contacts[this.activeIndex].messages)
+                
             }
     }
+        
 }).mount('.container');
 
 
