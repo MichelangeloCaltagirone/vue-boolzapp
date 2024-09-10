@@ -16,6 +16,8 @@
     <!-- Vue JS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     
+    
+    
     <div class="container">
         <aside>
             <header>
@@ -81,7 +83,7 @@
             <section id="conversation">
 
                     <ul>
-                        <li v-for="mex in contacts[activeIndex].messages" :class=mex.status><div>{{mex.message}}<span class="currentTime">12:00</span></div></li>
+                        <li v-for="mex in contacts[activeCompIndex].messages" :class=mex.status><div>{{mex.message}}<span class="currentTime">{{mex.date}}</span></div></li>
                     </ul>
 
             </section>
@@ -93,6 +95,8 @@
         </main>
     </div>
 
+    <!-- Luxon for date support -->
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.5.0/build/global/luxon.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

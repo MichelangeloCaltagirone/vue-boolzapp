@@ -7,6 +7,7 @@ Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti
  */
 
 const {createApp} = Vue;
+const DateTime = luxon.DateTime;
 
 createApp ({
     data: () => {
@@ -178,7 +179,8 @@ createApp ({
             activeIndex: '0',
             activeContactPic: './img/avatar_1.png',
             newMex: '',
-            searchContact: ''
+            searchContact: '',
+            DateTime: luxon.DateTime
         }
     },
 
@@ -190,11 +192,13 @@ createApp ({
             this.activeIndex = index,
             console.log(this.activeContactPic),
             console.log(this.activeIndex),
-            console.log(this.activeContact)            
+            console.log(this.activeContact)
+                   
             },
             appendNewMex() {
                 console.log(this.newMex,'nuovo messaggio'),
                 this.contacts[this.activeIndex].messages.push({
+                    //date: DateTime.now(),
                     date: null,
                     message: this.newMex,
                     status: 'sent'
@@ -209,7 +213,14 @@ createApp ({
                     })
                 }, 1000)                
             }
-    }        
+    },
+    
+    computed: {
+        activeCompIndex() {
+            return this.activeIndex
+        }
+    }
 }).mount('.container');
+
 
 

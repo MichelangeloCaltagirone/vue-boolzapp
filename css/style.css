@@ -68,17 +68,66 @@ i {
     scrollbar-width: thin;
     height: calc(95vh - 190px);
 }
-
 main header {
     border-left: 2px solid #B1B1B1;
 }
 
+/* section Remainder in Aside */
+#remainder i.fa-regular.fa-bell-slash::before {
+    font-size: 30px;
+    border-radius: 50%;
+    color: rgba(142, 218, 252, 1);
+    background-color: white; 
+}
+#remainder i {
+    width: 40px;
+    height: 40px;
+    padding: 5px
+}
+
+/* Section Search in Aside */
+#searchContact input {
+    width: 90%;
+    height: 30px;
+    margin-left: 5%;
+    margin-top: 7.5px;
+    border: 0;
+    padding-left: 10px;
+}
+
+/* Section contactList in Aside */
+#contactList .leftHeader {
+    height: 65px;
+    align-items: flex-start;
+    
+    img {
+        align-self: center;
+    }
+    .ColumnDisplay {
+        flex-grow: 1;
+    }
+    .contactName {
+        font-size: 13px;
+        margin: 7px 0 3px 0;
+    };
+    .lastAccessTime {
+        font-size: 11px;
+    };
+    div:last-child {
+        margin-top: 3px;
+        font-size: 11px;
+    }
+}
+#contactList li {
+    padding: 5px;
+}
+
 
 /* Main Utility */
+/* Section convesation in Main */
 #conversation {
     padding: 15px 30px 0 30px;
     height: calc(100% - 130px);
-    /* display: flex; */
     overflow-y: scroll;
     scrollbar-width: thin;
     background-image: url(/img/mine.png);
@@ -99,8 +148,7 @@ main header {
         div {
             background-color:#D5F9BA;
         }
-    }
-       
+    }       
     .currentTime {
         color: #838484;
         font-size: 7px;
@@ -131,6 +179,7 @@ footer {
 }
 
 
+
 /* Utility */
 .profilePic {
     width: 55px;
@@ -150,53 +199,3 @@ footer {
 }
 
 
-/* section Remainder in Aside */
-
-#remainder i.fa-regular.fa-bell-slash::before {
-    font-size: 30px;
-    border-radius: 50%;
-    color: rgba(142, 218, 252, 1);
-    background-color: white; 
-}
-#remainder i {
-    width: 40px;
-    height: 40px;
-    padding: 5px
-}
-
-/* Section Search in Aside */
-#searchContact input {
-    width: 90%;
-    height: 30px;
-    margin-left: 5%;
-    margin-top: 7.5px;
-    border: 0;
-    padding-left: 10px;
-}
-
-/* Section contactList */
-#contactList .leftHeader {
-    height: 65px;
-    align-items: flex-start;
-    
-    img {
-        align-self: center;
-    }
-    .ColumnDisplay {
-        flex-grow: 1;
-    }
-    .contactName {
-        font-size: 13px;
-        margin: 7px 0 3px 0;
-    };
-    .lastAccessTime {
-        font-size: 11px;
-    };
-    div:last-child {
-        margin-top: 3px;
-        font-size: 11px;
-    }
-}
-#contactList li {
-    padding: 5px;
-}
